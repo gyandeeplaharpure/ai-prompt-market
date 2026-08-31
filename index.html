@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI Prompt Market</title>
+  <meta name="description" content="Premium AI prompts for just ₹9 each.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">AI<span>Market</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#prompts">Prompts</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+
+        <div class="badge">⚡ Premium AI Prompts</div>
+
+        <h1>
+          Get Powerful AI Prompts
+          <span>For Just ₹9</span>
+        </h1>
+
+        <p>
+          Discover ready-to-use prompts designed to help you create,
+          learn, write and work smarter with AI.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#prompts" class="primary-btn">Explore Prompts →</a>
+          <a href="#about" class="secondary-btn">How It Works</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROMPTS -->
+    <section class="products" id="prompts">
+
+      <div class="section-heading">
+        <p class="small-title">OUR COLLECTION</p>
+        <h2>Popular AI Prompts</h2>
+        <p>Unlock useful prompts for only ₹9 each.</p>
+      </div>
+
+
+      <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+
+          <div class="product-icon">🎬</div>
+
+          <div class="product-info">
+            <span class="category">VIDEO</span>
+
+            <h3>Cinematic AI Video Prompt</h3>
+
+            <p>
+              Create cinematic and engaging AI video concepts
+              with a powerful ready-to-use prompt.
+            </p>
+
+            <div class="locked-preview">
+              🔒 Full prompt locked
+            </div>
+
+            <div class="product-bottom">
+              <strong>₹9</strong>
+
+              <button onclick="addToCart('Cinematic AI Video Prompt', 9)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+
+          <div class="product-icon">📈</div>
+
+          <div class="product-info">
+            <span class="category">BUSINESS</span>
+
+            <h3>AI Business Idea Prompt</h3>
+
+            <p>
+              Generate creative business ideas, strategies and
+              opportunities using AI.
+            </p>
+
+            <div class="locked-preview">
+              🔒 Full prompt locked
+            </div>
+
+            <div class="product-bottom">
+              <strong>₹9</strong>
+
+              <button onclick="addToCart('AI Business Idea Prompt', 9)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+
+          <div class="product-icon">✍️</div>
+
+          <div class="product-info">
+            <span class="category">WRITING</span>
+
+            <h3>AI Content Creator Prompt</h3>
+
+            <p>
+              Create better social media content, captions and
+              creative ideas with AI.
+            </p>
+
+            <div class="locked-preview">
+              🔒 Full prompt locked
+            </div>
+
+            <div class="product-bottom">
+              <strong>₹9</strong>
+
+              <button onclick="addToCart('AI Content Creator Prompt', 9)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+
+          <div class="product-icon">🎨</div>
+
+          <div class="product-info">
+            <span class="category">IMAGE</span>
+
+            <h3>AI Image Generation Prompt</h3>
+
+            <p>
+              Create detailed and creative AI image concepts
+              with a professional prompt.
+            </p>
+
+            <div class="locked-preview">
+              🔒 Full prompt locked
+            </div>
+
+            <div class="product-bottom">
+              <strong>₹9</strong>
+
+              <button onclick="addToCart('AI Image Generation Prompt', 9)">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how" id="about">
+
+      <div class="section-heading">
+        <p class="small-title">SIMPLE & FAST</p>
+        <h2>How It Works</h2>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div>01</div>
+          <h3>Choose</h3>
+          <p>Find the AI prompt you need.</p>
+        </div>
+
+        <div class="step">
+          <div>02</div>
+          <h3>Purchase</h3>
+          <p>Buy your selected prompt for ₹9.</p>
+        </div>
+
+        <div class="step">
+          <div>03</div>
+          <h3>Unlock</h3>
+          <p>Get access to your purchased prompt.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CART MODAL -->
+  <div class="cart-overlay" id="cart-overlay">
+
+    <div class="cart-box">
+
+      <button class="close-btn" onclick="closeCart()">×</button>
+
+      <h2>Your Cart</h2>
+
+      <div id="cart-items">
+        <p class="empty-cart">Your cart is empty.</p>
+      </div>
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong>₹<span id="cart-total">0</span></strong>
+      </div>
+
+      <button class="checkout-btn" onclick="checkout()">
+        Continue to Checkout →
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo">AI<span>Market</span></div>
+
+    <p>
+      Premium AI prompts. Simple pricing. ₹9 each.
+    </p>
+
+    <p class="copyright">
+      © 2026 AI Market. All rights reserved.
+    </p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+        </html>
